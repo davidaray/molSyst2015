@@ -1,16 +1,12 @@
 ## Unit 14 - Substitution Models
 
 
-First put the following information at the bottom of your .bashrc.
+First lets get everyone on the same page with their ```.bashrc```.  Log onto Hrothgar.
 
-```
-########################################################
-# systematics paths/aliases
-#########################################################
-export PATH=/lustre/work/apps/tcoffee/Version_11/plugins/linux:$PATH                     
-export PATH=/lustre/work/apps/tcoffee/Version_11/bin/t_coffee:$PATH
-export PATH=/lustre/work/daray/software/muscle/muscle:$PATH
-alias relindel.pl="/lustre/work/apps/relindel.v1.0/programs/relindel/relindel.pl"
+***IMPORTANT: IF YOU HAVE A CUSTOM ```.bashrc``` DO NOT DO THIS.  IT MAY WIPE OUT IMPORTANT FEATURES SPECIFIC TO YOUR ANALYSES***
+
+``` 
+cp /home/roplatt/.bashrc ~/.bashrc
 ```
 
 Now make sure you have the following programs installed.
