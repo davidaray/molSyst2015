@@ -149,7 +149,7 @@ Keep in mind that by coding indels we are increasing the available phylogenetic 
  ***********   
     
     
-Updated: 7:30 AM - 25 Oct 2015
+Updated: 7:45 AM - 28 Oct 2015
 
 Molecular Systematics Zool6505
     
