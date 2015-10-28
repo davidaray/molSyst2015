@@ -47,6 +47,7 @@ All of the following analyses will be done in MEGA6 untill notified.
 ### Model Choice    
  
  9) Use ```MEGA6``` to test for the best fit model. Which is it?  How does this compare with your graph of likelihood scores? How many models were tested.
+
  10) Use ```jModelTest``` to choose the best-fit model.  Run this with minimal substitution schemes.  How many models were tested?  How many models are available to be tested? 
  
  
