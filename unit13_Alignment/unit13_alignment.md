@@ -23,9 +23,11 @@ As with many programs there are several clustal servers available.  These are ni
 	[http://www.genome.jp/tools/clustalw/](http://www.genome.jp/tools/clustalw/)
 	
 We have several versions of clustal on Hrothgar.  They are located here:
+
 ```/lustre/work/apps/tcoffee/Version_11/plugins/linux```
 
 So to call clustalw you would need to call the program via
+
 ``` /lustre/work/apps/tcoffee/Version_11/plugins/linux/clustalw ```
 
 Can you see where this would be tedious...giving an absolute path for every program we want to run?  Lets make a habit of adding each of the programs we use to our system path.
