@@ -24,7 +24,9 @@ As with many programs there are several clustal servers available.  These are ni
 	
 We have several versions of clustal on Hrothgar.  They are located here:
 
-```/lustre/work/apps/tcoffee/Version_11/plugins/linux```
+```
+/lustre/work/apps/tcoffee/Version_11/plugins/linux
+```
 
 So to call clustalw you would need to call the program via
 
@@ -57,7 +59,6 @@ For example:
 clustalw2 -infile=testData.fas -outfile=testData_clustalw2.fas -type=DNA -output=FASTA
 clustalw2 -infile=testData.fas -outfile=testData_go100_ge5_clustalw2.fas -type=DNA -output=FASTA -gapopen=100 -gapext=5
 clustalw2 -infile=testData.fas -outfile=testData_go0_ge50_clustalw2.fas -type=DNA -output=FASTA -gapopen=0 -gapext=50
-
 ```
 
 For timesake, we cannot discuss running ```clustalo``` (omega).  Here is the **[manual](http://computing.bio.cam.ac.uk/local/doc/clustalo.txt)**.  Have it available in case you have any questions in the future.  The important thing to know about ```clustalo``` is that it is both a progressive and iterative aligner.
