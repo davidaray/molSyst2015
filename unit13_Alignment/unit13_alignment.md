@@ -65,7 +65,9 @@ For timesake, we cannot discuss running ```clustalo``` (omega).  Here is the **[
 
 The second major category of aligners are iterative aligners.  Here we will discuss ```muscle```. Like most programs with ```muscle``` you can call the command line options just by calling the program.
 
-```muscle```
+```
+muscle
+```
 
 Simple enough.  Align your data with ```muscle```.
 
@@ -149,7 +151,7 @@ Keep in mind that by coding indels we are increasing the available phylogenetic 
  ***********   
     
     
-Updated: 7:45 AM - 28 Oct 2015
+Updated: 9:55 AM - 28 Oct 2015
 
 Molecular Systematics Zool6505
     
