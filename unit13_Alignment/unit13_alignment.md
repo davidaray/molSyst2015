@@ -65,9 +65,7 @@ For timesake, we cannot discuss running ```clustalo``` (omega).  Here is the **[
 
 The second major category of aligners are iterative aligners.  Here we will discuss ```muscle```. Like most programs with ```muscle``` you can call the command line options just by calling the program.
 
-```
-muscle
-```
+```muscle```
 
 Simple enough.  Align your data with ```muscle```.
 
