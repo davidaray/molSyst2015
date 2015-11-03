@@ -1,0 +1,36 @@
+#NEXUS 
+
+Begin trees;  [Treefile saved Tue Nov 03 11:29:40 2015]
+[!
+>Data file = testData.nexus
+>Bootstrap method with heuristic search:
+>  Number of bootstrap replicates = 10
+>  Starting seed = 516775738
+>  Number of characters resampled in each replicate = 1143
+>  Optimality criterion = parsimony
+>    Character-status summary:
+>      Of 1143 total characters:
+>        All characters are of type 'unord'
+>        All characters have equal weight
+>        553 characters are constant
+>        65 variable characters are parsimony-uninformative
+>        Number of parsimony-informative characters = 525
+>    Gaps are treated as "missing"
+>  Starting tree(s) obtained via stepwise addition
+>    Addition sequence: random
+>    Number of replicates = 10
+>    Starting seed = 32386207
+>    Number of trees held at each step = 1
+>  Branch-swapping algorithm: tree-bisection-reconnection (TBR) with reconnection limit = 8
+>    Steepest descent option not in effect
+>  Initial 'Maxtrees' setting = 100 (will be auto-increased by 100)
+>  Branches collapsed (creating polytomies) if maximum branch length is zero
+>  'MulTrees' option in effect
+>  No topological constraints in effect
+>  Trees are unrooted
+>
+>  10 bootstrap replicates completed
+>  Time used = 25.53 sec (CPU time = 24.64 sec)
+]
+tree 'PAUP_1' = [&U] (sp1,(sp2,sp3,sp4,((sp5,sp6)100,((sp8,sp10)100,sp9)100,sp11)60,sp7,((((sp12,(sp34,sp39)100)100,(sp23,sp40)100)100,(sp26,sp35)100)80,sp36)75.714,(sp13,sp16)100,(sp14,sp15)100,(((sp17,sp61)65,sp18)100,sp19)60,(sp20,(sp21,sp22)55,(sp70,sp71)100)100,(sp24,(sp50,sp51)100)90,(sp25,sp45)100,((sp27,sp63)100,(sp32,sp62)100)100,sp28,(sp29,(sp30,sp31)100)100,(sp33,sp52)100,(sp37,sp79)70,sp38,(((sp41,sp49)100,sp42,(sp43,sp60)100,sp44,sp46)72.5,sp48)100,(((sp47,sp76)100,sp77)70,sp75)100,((((sp53,sp57)65,sp55)100,sp54)100,(sp58,sp59)100)100,sp56,sp64,(sp65,sp67)100,sp66,sp68,sp69,(sp72,sp73)100,sp74,sp78,((sp81,sp83)100,sp82)100,sp84)90,sp80)100;
+End;
