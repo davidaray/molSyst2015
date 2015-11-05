@@ -7,7 +7,7 @@ POINTS                       | SECTION
 .                            |Background information
 .                            |Proposed research
 .                            |Summary statement
-**20 Materials and Methods** | 
+**20pts Materials and Methods** | 
  .                           |Data Generation
  .                           |Alignment
  .                           |Model Testing
