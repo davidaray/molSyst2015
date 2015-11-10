@@ -21,7 +21,6 @@ Download the data
 ```
 wget -O primates_alnMuscle.fas https://www.dropbox.com/s/hs6vqras0ihg8d5/primates_alnMuscle.fas?dl=0 
 wget -O primates_alnMuscle.phy https://www.dropbox.com/s/k1ukq9vnfie89jn/primates_alnMuscle.phy?dl=0
-wget Model information ([jModelTest](LINK HERE))
 ```
 **Links**
 - Model information ([jModelTest PDF](https://www.dropbox.com/s/rfx99qu1xahmzow/primate_jModelTest.pdf?dl=0))
