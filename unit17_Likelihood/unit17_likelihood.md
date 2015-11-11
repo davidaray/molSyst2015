@@ -133,6 +133,7 @@ This will generate a ML tree and bootstrap it ```-#``` times (in this case 1K). 
 So there are a few other major things - outgroups, combined data, models that need to be discussed.
 
 **6) Functionality**
+
 1) an outgroup can be set with ```-o```.
 ```
 raxmlHPC -f a -m GTRGAMMAI -p 12345 -x 98765 -s primates_alnMuscle.phy -n MLBoot -# 1000 -o Tupaia_belangeri#EU531776
