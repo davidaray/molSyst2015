@@ -50,7 +50,7 @@ Using our data - lets infer the ML tree
 
 
 
-This will build a GTR+G tree from a randomized stepwwise addtion parsiomny tree (using 12345 as the random number seed...increases replicability) from the alignment test.phy and all output is appended with the .short tag/name.
+This will build a GTR+I+G tree from a randomized parsiomny tree (using 12345 as the random number seed...increases replicability) from the alignment test.phy and all output is appended with the .short tag/name.
 
 
 
@@ -98,7 +98,7 @@ Taking the best scoring tree from the prevous run, lets bootstrap it using the -
 raxmlHPC -m GTRGAMMAI -p 12345 -b 98765 -s primates_alnMuscle.phy -n shortBoot -# 10
 ```
 
-This command genetates 10 bootstrap relicates to the file RAxML_bootstrap.shortboot and these can be used to score clades (bipartitions) on the best tree from step X.
+This command genetates 10 bootstrap relicates to the file RAxML_bootstrap.shortboot and these can be used to score clades (bipartitions) on the best tree from step 2.
 
 There there are a few new parameters:
 - ```-f``` - type of anlaysis
@@ -132,6 +132,7 @@ This will generate a ML tree and bootstrap it ```-#``` times (in this case 1K). 
 
 So there are a few other major things - outgroups, combined data, models that need to be discussed.
 
+**6) Functionality**
 1) an outgroup can be set with ```-o```.
 ```
 raxmlHPC -f a -m GTRGAMMAI -p 12345 -x 98765 -s primates_alnMuscle.phy -n MLBoot -# 1000 -o Tupaia_belangeri#EU531776
