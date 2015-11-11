@@ -25,6 +25,7 @@ wget -O primates_alnMuscle.phy https://www.dropbox.com/s/k1ukq9vnfie89jn/primate
 **Links**
 - Model information ([jModelTest PDF](https://www.dropbox.com/s/rfx99qu1xahmzow/primate_jModelTest.pdf?dl=0))
 - FigTree ([LINK](http://tree.bio.ed.ac.uk/software/figtree/))
+- Inkscape ([LINK](https://inkscape.org/en/download/))
 
 **2] Setting up RAxML**
 
@@ -35,7 +36,7 @@ We are going to build and bootstrap the ML trees in RAxML two different ways. Th
 A typical RAxML command looks like this:
 
 ```
-/lustre/work/apps/RAxML/raxmlHPC -m <model> -p <seedNumber> -s <alignment_file> -n <name>
+raxmlHPC -m <model> -p <seedNumber> -s <alignment_file> -n <name>
 ```
 Parameters
 - ```-m``` - nucleodtide substitution model
@@ -45,7 +46,7 @@ Parameters
 
 Using our data - lets infer the ML tree
 
-``` raxmlHPC -m GTRGAMMA -p 12345 -s primates_alnMuscle.phy -n singleInf```
+``` raxmlHPC -m GTRGAMMAI -p 12345 -s primates_alnMuscle.phy -n singleInf```
 
 
 
@@ -78,7 +79,7 @@ Inference[0] final GAMMA-based Likelihood: -23947.871001 tree written to file /h
 Now this tree was the ML tree created from a single starting tree. We can increase the number of searches by using the ```-#``` command
 
 ```
-raxmlHPC -m GTRGAMMA -p 12345 -s primates_alnMuscle.phy -n infer10 -# 10
+raxmlHPC -m GTRGAMMAI -p 12345 -s primates_alnMuscle.phy -n infer10 -# 10
 ```
 
 This command will calculate an ML tree from 10 random starting trees.
@@ -94,7 +95,7 @@ Great.  **This gives us the best tree but doesn't tell us anything about how muc
 Taking the best scoring tree from the prevous run, lets bootstrap it using the -b option.  When the -b option is present we are telling RAxML that we want to bootstrap our data.  The number immediatley after the ```-b``` is not the number of bootstrapping replicates.  Instead it is a random seed number.  The ```-#``` tells RAxML the number of boostrapping replicates.
 
 ```
-raxmlHPC -m GTRGAMMA -p 12345 -b 98765 -s primates_alnMuscle.phy -n shortBoot -# 10
+raxmlHPC -m GTRGAMMAI -p 12345 -b 98765 -s primates_alnMuscle.phy -n shortBoot -# 10
 ```
 
 This command genetates 10 bootstrap relicates to the file RAxML_bootstrap.shortboot and these can be used to score clades (bipartitions) on the best tree from step X.
@@ -105,7 +106,7 @@ There there are a few new parameters:
 - ```-z``` - other trees (in this case boostrap replicates).
 
 ```
-raxmlHPC -m GTRGAMMA -f b -t RAxML_bestTree.infer10 -z RAxML_bootstrap.shortBoot -n bootFinal
+raxmlHPC -m GTRGAMMAI -f b -t RAxML_bestTree.infer10 -z RAxML_bootstrap.shortBoot -n bootFinal
 ```
 
 Several new files are generated.  The important one is ```RAxML_bipartitions.bootFinal```.  This has your best scoring tree with bipartition frequencies added.
@@ -123,7 +124,7 @@ To view the bipartition frequency
 
 So RAxML offers the ability to combine the ML search and the bootstrapping into a single step.  This "rapid bootstrapping" option can be invoked using:
 
-```raxmlHPC -f a -m GTRGAMMA -p 12345 -x 98765 -s test.phy -n MLBoot -# 1000```
+```raxmlHPC -f a -m GTRGAMMAI -p 12345 -x 98765 -s test.phy -n MLBoot -# 1000```
 
 This will generate a ML tree and bootstrap it ```-#``` times (in this case 1K).  Notice the only diiference between this command and ones we used previously is ```-f a``` and ```-x```.
 
@@ -133,7 +134,7 @@ So there are a few other major things - outgroups, combined data, models that ne
 
 1) an outgroup can be set with ```-o```.
 ```
-raxmlHPC -f a -m GTRGAMMA -p 12345 -x 98765 -s primates_alnMuscle.phy -n MLBoot -# 1000 -o Tupaia_belangeri#EU531776
+raxmlHPC -f a -m GTRGAMMAI -p 12345 -x 98765 -s primates_alnMuscle.phy -n MLBoot -# 1000 -o Tupaia_belangeri#EU531776
 ```
 
 2) GTR is pretty much the only model that is used
@@ -142,7 +143,7 @@ raxmlHPC -f a -m GTRGAMMA -p 12345 -x 98765 -s primates_alnMuscle.phy -n MLBoot 
 
 3) When you are doing your actual analysis you can use more than 1 processor/thread with the -T option.
 ```
-raxmlHPC -f a -m GTRGAMMA -p 12345 -x 98765 -s primates_alnMuscle.phy -n MLBoot -# 1000 -o Tupaia_belangeri#EU531776 -T 4
+raxmlHPC -f a -m GTRGAMMAI -p 12345 -x 98765 -s primates_alnMuscle.phy -n MLBoot -# 1000 -o Tupaia_belangeri#EU531776 -T 4
 ```
 Its tempting to overdo the number of threads.  Don't. From the RAxML manual (pg 5):
 
@@ -153,7 +154,7 @@ Alignment has 70 distinct alignment patterns As a rule of thumb I'd use one
 4) You can partition your data into genes (or codons) using the -q option and passing a file of partition boundaries to RAxML. 
 
 ```
-raxmlHPC -f a -m GTRGAMMA -p 12345 -x 98765 -s primates_alnMuscle.phy -n MLBoot -# 1000 -o Tupaia_belangeri#EU531776 -q primatePartions.txt
+raxmlHPC -f a -m GTRGAMMAI -p 12345 -x 98765 -s primates_alnMuscle.phy -n MLBoot -# 1000 -o Tupaia_belangeri#EU531776 -q primatePartions.txt
 ```
 The primatePartions.txt file looks like this:
 ```
