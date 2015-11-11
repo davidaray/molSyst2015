@@ -157,7 +157,7 @@ Alignment has 70 distinct alignment patterns As a rule of thumb I'd use one
 ```
 raxmlHPC -f a -m GTRGAMMAI -p 12345 -x 98765 -s primates_alnMuscle.phy -n MLBoot -# 1000 -o Tupaia_belangeri#EU531776 -q primatePartions.txt
 ```
-The primatePartions.txt file looks like this:
+The ```primatePartions.txt``` file looks like this:
 ```
 DNA, firstSecondPos = 1-1140\3, 2-1140\3
 DNA, thirdPos = 3-1140\3
@@ -171,7 +171,7 @@ For now, take some time and begin running the data for your final project throug
 *****
 rnp
 
-10 Nov 2015
+11 Nov 2015
 
 
 
