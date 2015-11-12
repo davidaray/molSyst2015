@@ -30,7 +30,7 @@ raxmlHPC -m GTRGAMMAI -p 12345 -s cytbPero_2014-01-31.phy -n infer10 -# 10
 **4) Build the best constrained (from 10 inferences)***
 
 ```
-raxmlHPC -m GTRGAMMAI -p 12345 -s cytbPero_2014-01-31.phy -n infer10 -# 10 -g stricto.const -n stricto -m GTRGAMMAI
+raxmlHPC -m GTRGAMMAI -p 12345 -s cytbPero_2014-01-31.phy -# 10 -g stricto.const -n stricto -m GTRGAMMAI
 ```
 
 **5) We need to calculate site log likilihood scores for both trees form the alignment.**
