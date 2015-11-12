@@ -19,7 +19,7 @@ wget -O stricto.const https://www.dropbox.com/s/ycr44vxy9ebye1q/stricto.const?dl
 ```
 
 
-**2) Using RAxML generate the best tree from 10 starting trees (inerences).**
+**2) Using RAxML generate the best tree from 10 starting trees (inferences).**
 ```
 raxmlHPC -m GTRGAMMAI -p 12345 -s cytbPero_2014-01-31.phy -n infer10 -# 10
 ```
@@ -38,7 +38,7 @@ raxmlHPC -m GTRGAMMAI -p 12345 -s cytbPero_2014-01-31.phy -n infer10 -# 10 -g st
 cat RAxML_bestTree.stricto RAxML_bestTree.infer10 >trees.nwk
 ```
 
-**6) Use the best tree to generate SLL**
+**6) Use the best tree to generate Site log-likelihood scores (SLL)**
 
 ```
 raxmlHPC -f g -s cytbPero_2014-01-31.phy -m GTRGAMMAI -z RAxML_bestTree.infer10 -n SLL
