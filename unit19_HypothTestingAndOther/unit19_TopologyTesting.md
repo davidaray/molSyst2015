@@ -41,7 +41,7 @@ cat RAxML_bestTree.stricto RAxML_bestTree.infer10 >trees.nwk
 **6) Use the best tree to generate Site log-likelihood scores (SLL)**
 
 ```
-raxmlHPC -f g -s cytbPero_2014-01-31.phy -m GTRGAMMAI -z RAxML_bestTree.infer10 -n SLL
+raxmlHPC -f g -s cytbPero_2014-01-31.phy -m GTRGAMMAI -z trees.nwk -n SLL
 ```
 ```
 ...
