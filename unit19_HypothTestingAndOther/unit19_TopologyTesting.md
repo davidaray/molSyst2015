@@ -94,4 +94,9 @@ reading RAxML_perSiteLLs.pv
      1    2  -54.0  0.997  0.997 |  0.997  1.000  0.996  0.996  0.996  0.996 |
 ```
 
-The trees are listed in the order of the input tree file.  In this case "item 1" is the constrained tree and "item two" is the unconstrained tree.  Across the board, the unconstrained tree is within the confidence set of our data, while the constrained tree is rejected.  Remember we aren't necessarily comparing these two trees to each other.  Instread we are comparing these trees to the best tree (given the data).  It just so happens that tree 2 (the unconstrained tree) is a close approximation of/if not the best tree.xi
+The trees are listed in the order of the input tree file.  In this case "item 1" is the constrained tree and "item two" is the unconstrained tree.  Across the board, the unconstrained tree is within the confidence set of our data, while the constrained tree is rejected.  Remember we aren't necessarily comparing these two trees to each other.  Instread we are comparing these trees to the best tree (given the data).  It just so happens that tree 2 (the unconstrained tree) is a close approximation of/if not the best tree.
+
+*******************
+rnp
+
+12 nov 2015
