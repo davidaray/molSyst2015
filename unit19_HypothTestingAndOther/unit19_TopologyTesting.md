@@ -78,11 +78,11 @@ Step B - Calculate p-values
 ```
 Step C - print p-values
 ```
-./consel/bin/catpv RAxML_perSiteLLs >pValTrees.consel
+./consel/bin/catpv -s 1 RAxML_perSiteLLs >pValTrees.consel
 ```
 Your information is now stored in ```pValTrees.consel``.  To see it:
 
-```cat -s 1 pValtrees.consel```
+```cat pValtrees.consel```
 
 My file looks like:
 
