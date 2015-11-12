@@ -51,7 +51,8 @@ Per-site Log Likelihoods written to File /home/roplatt/unit17/RAxML_perSiteLLs.S
 
 **7) now we have to get and install/compile consel**
 
-```wget http://www.sigmath.es.osaka-u.ac.jp/shimo-lab/prog/consel/pub/cnsls020.tgz
+```
+wget http://www.sigmath.es.osaka-u.ac.jp/shimo-lab/prog/consel/pub/cnsls020.tgz
 tar -xvf cnsls020.tgz
 cd ~/unit19/topTest
 cd consel
