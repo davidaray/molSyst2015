@@ -80,7 +80,7 @@ Step C - print p-values
 ```
 ./consel/bin/catpv -s 1 RAxML_perSiteLLs >pValTrees.consel
 ```
-Your information is now stored in ```pValTrees.consel``.  To see it:
+Your information is now stored in ```pValTrees.consel```.  To see it:
 
 ```cat pValtrees.consel```
 
