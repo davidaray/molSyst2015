@@ -253,7 +253,6 @@ begin mrbayes;
         sump;
 
 end;
-
 ```
 
 While this is running think about the following questions:
@@ -297,7 +296,9 @@ mpirun -np 1 mb
 This is telling a seperate program ```mpi``` to run ```mb``` on ```-np``` threads.  In this case 1.
 ```mrbayes``` can take advantage of mp and run a number of threads equivelant to the number of runs.  So...as an example, if you have the following ```mcmcp``` command:
 
-  ```mcmcp ngen=1000000 nruns=2 samplefreq=100 printfreq=1000 nchains=10;```
+  ```
+mcmcp ngen=1000000 nruns=2 samplefreq=100 printfreq=1000 nchains=10;
+```
   
   then you could distribute your analysis across 20 threads (```nruns``` * ```nchains``` = threads).
 
