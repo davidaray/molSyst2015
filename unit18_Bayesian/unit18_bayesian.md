@@ -222,22 +222,40 @@ begin mrbayes;
         
         [set parameters of the likelihood model]
         lset applyto=(1,2) nst=6 rates=invgamma;
-		unlink shape=(1,2);
+		unlink shape=(all), revmat=(all), statefreq=(all), shape=(all), 
+        	   pinvar=(all), brlens=(all), topology=(all);
+        
+        [set priors on parameters]
+        prset applyto=(2)
+			revmatpr=fixed(0.6604,9.7015,0.6585,2.3585,23.9207,1.0000)
+			statefreqpr=fixed(0.2822,0.1483,0.2659,0.3036)
+			pinvarpr=fixed(0.3060)
+			shapepr=exponential(1.6090);
+
         
         [set parameters of the monte-carlo markov chain]
         mcmcp ngen=1000000 nruns=2 samplefreq=100 printfreq=1000;
         
         [being the search]
-        [mcmc;]
+        mcmc;
+
+		[summarize trees and parameters]
+        sumt contype=allcompat;
+        sump;
+
 end;
 ```
 
-look at stationarity (continue)
+While this is running think about the following questions:
+1) How many chains are being run?
+2) How many total trees are being sampled?
+3) How many trees are being summarized?
+4) Some people are hesitant to use Bayesian probablilities?  What argument(s) could you make against Bayesian phylogenetics.
 
-build tree more
 
-look at stationarity
+Open the one of the parameter files in Tracer.  Look at the ESSs.  They dropped.  Why?  Did this run reach stationarity? How many more samples would you guess we need? Generations?
 
+How would a real ```mrbayes``` run look?  I normally run 4-8 runs of 4 chains with 10M generations, sampling every 100-1K.  What advantages is there to
 
 
 
