@@ -268,8 +268,8 @@ How would a real ```mrbayes``` run look?  I normally run 4-8 runs of 4 chains wi
 Since this analsysis will take a while, you can download there results here
 
 ```
-wget -O primates_2.5M-100s-2r-4c.bayes.tgz 
-
+wget -O primates_2.5M-100s-2r-4c.bayes.tgz https://www.dropbox.com/s/7u1l3j5sb7ahjyl/primates_2.5M-100s-2r-4c.bayes.tgz?dl=0
+```
 **4) Generating a "publication quailty" tree**
 
 Since we don't have time in class to generate a tree using more appropriate parameters, lets use the ```primates_100K-100s-2r-4c.bayes.con.tre``` to see how we can take a raw tree and generate a publication quality image.
