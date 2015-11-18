@@ -243,7 +243,7 @@ begin mrbayes;
                 nruns=2 
                 samplefreq=100 
                 printfreq=1000 
-                filename=primates_2.5K-100s-2r-4c.bayes;
+                filename=primates_2.5M-100s-2r-4c.bayes;
 
         [being the search]
         mcmc;
@@ -265,6 +265,10 @@ Open the one of the parameter files in Tracer.  Look at the ESSs.  They dropped.
 
 How would a real ```mrbayes``` run look?  I normally run 4-8 runs of 4 chains with 10M generations, sampling every 100-1K.  Why would one increase runs over chains or chains over runs?
 
+Since this analsysis will take a while, you can download there results here
+
+```
+wget -O primates_2.5M-100s-2r-4c.bayes.tgz 
 
 **4) Generating a "publication quailty" tree**
 
